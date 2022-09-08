@@ -2,13 +2,14 @@ import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router'
 import axios from 'axios'
 
-const Planets = () => {
+
+const Ships = () => {
     const [data, setData] = useState({});
 
     const {id} = useParams();
 
     useEffect(() => {
-        axios.get(`https://swapi.dev/api/planets/${id}/?format=json`)
+        axios.get(`https://swapi.dev/api/starships/${id}/?format=json`)
         .then((res) => {
             console.log(res.data)
             setData(res.data);
@@ -24,12 +25,13 @@ const Planets = () => {
         <div>
             <ul>
                 <li>Name: {data.name}</li>
-                <li>Climate: {data.climate}</li>
-                <li>Diameter: {data.diameter}</li>
-                <li>Terrain: {data.terrain}</li>
+                <li>Cost: {data.cost_in_credits}</li>
+                <li>Cargo Capacity: {data.cargo_capacity}</li>
+                <li>Hyperdrive Rating: {data.hyperdrive_rating}</li>
+                <li>Manufacturer: {data.manufacturer}</li>
             </ul>
         </div>
     )
 }
 
-export default Planets
+export default Ships

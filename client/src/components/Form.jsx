@@ -20,7 +20,7 @@ const Form = () => {
                 <select onChange={e => setType(e.target.value)} value={type}>
                     <option>people</option>
                     <option>planets</option>
-                    <option>ships</option>
+                    <option>starships</option>
                 </select>
                 <label> ID: </label>
                 <input type="number" min={1} onChange={e => setId(e.target.value)} value={id}/>
