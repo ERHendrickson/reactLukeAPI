@@ -5,6 +5,7 @@ import Form from './components/Form'
 import People from './components/People'
 import Planets from './components/Planets'
 import Ships from './components/Ships'
+import Homeworld from './components/Homeworld';
 
 function App() {
   return (
