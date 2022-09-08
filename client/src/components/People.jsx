@@ -60,7 +60,6 @@ const People = () => {
                 <li>Eye Color: {data.eye_color}</li>
                 <li>Hair Color: {data.hair_color}</li>
                 <li>Mass: {data.mass}</li>
-                <li></li>
                 <li>Homeworld:<Link className='noUnder' to={`/planets/${homeId}`}> <Homeworld homeName={data.homeworld}/></Link></li>
             </ul>
         </div>
